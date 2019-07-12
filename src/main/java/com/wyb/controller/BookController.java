@@ -17,7 +17,7 @@ public class BookController {
      * @param book
      * @return
      */
-    @RequestMapping("/findBook")
+    /*@RequestMapping("/findBook")
     @ResponseBody
     public Book findBook(@RequestBody Book book){
         //观察页面闯入的json数据是否封装到Book对象
@@ -28,19 +28,19 @@ public class BookController {
         book.setPrice(168.0);
         book.setRemark("完美的ssh组合的轻量级Java EE应用开发方式");
         return book;
-    }
+    }*/
 
     @RequestMapping("/findBooks")
     @ResponseBody
-    public List<Book1> findBooks(){
+    public List<Book> findBooks(){
         // 创建集合
-        List<Book1> books = new ArrayList<Book1>();
+        List<Book> books = new ArrayList<Book>();
         // 添加图书对象
-        books.add(new Book1(1,"疯狂Java讲义","李刚","java.jpg",109.0));
-        books.add(new Book1(2,"轻量级JavaEE企业应用实战","李刚","ee.jpg",108.0));
-        books.add(new Book1(3,"Spring MVC企业应用实战","肖文吉","SpringMyBatis.jpg",58.0));
-        books.add(new Book1(4,"疯狂Android讲义","李刚","android.jpg",108.0));
-        books.add(new Book1(5,"疯狂Ajax开发","李刚","ajax.jpg",79.0));
+        books.add(new Book(1,"疯狂Java讲义","李刚","java.jpg",109.0));
+        books.add(new Book(2,"轻量级JavaEE企业应用实战","李刚","ee.jpg",108.0));
+        books.add(new Book(3,"Spring MVC企业应用实战","肖文吉","SpringMyBatis.jpg",58.0));
+        books.add(new Book(4,"疯狂Android讲义","李刚","android.jpg",108.0));
+        books.add(new Book(5,"疯狂Ajax开发","李刚","ajax.jpg",79.0));
         // 返回集合
         return books;
 

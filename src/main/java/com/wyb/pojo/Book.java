@@ -4,23 +4,29 @@ import java.io.Serializable;
 
 public class Book implements Serializable {
 
-    private Integer id;
+   /* private Integer id;
     private String name;
     private String author;
     private String image;
     private Double price;
-    private String remark;
+    private String remark;*/
+
+
+    private Integer id;
+    private String title;
+    private String image;
+    private String author;
+    private Double price;
 
     public Book() {
     }
 
-    public Book(Integer id, String name, String author, String image, Double price, String remark) {
+    public Book(Integer id, String title, String image, String author, Double price) {
         this.id = id;
-        this.name = name;
-        this.author = author;
+        this.title = title;
         this.image = image;
+        this.author = author;
         this.price = price;
-        this.remark = remark;
     }
 
     public Integer getId() {
@@ -31,20 +37,12 @@ public class Book implements Serializable {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getImage() {
@@ -55,6 +53,14 @@ public class Book implements Serializable {
         this.image = image;
     }
 
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
     public Double getPrice() {
         return price;
     }
@@ -63,11 +69,15 @@ public class Book implements Serializable {
         this.price = price;
     }
 
-    public String getRemark() {
-        return remark;
-    }
 
-    public void setRemark(String remark) {
-        this.remark = remark;
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", image='" + image + '\'' +
+                ", author='" + author + '\'' +
+                ", price=" + price +
+                '}';
     }
 }
